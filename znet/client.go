@@ -125,7 +125,7 @@ func (c *Client) Restart() {
 		// Create a raw socket and get net.Conn (创建原始Socket，得到net.Conn)
 		switch c.version {
 		case "websocket":
-			wsAddr := fmt.Sprintf("ws://%s:%d", c.Ip, c.Port)
+			wsAddr := fmt.Sprintf("ws://%s:%d/conn", c.Ip, c.Port)
 
 			// Create a raw socket and get net.Conn (创建原始Socket，得到net.Conn)
 			wsConn, _, err := c.dialer.Dial(wsAddr, nil)
